@@ -1,6 +1,15 @@
 <h1 align="center">Java Android学习/面试指南</h1>
 
-本文并非原创，通过各位博主综合而得，以便供自己方便学习，在此感谢各位前辈，并在下面注明出处
+
+<!--| Ⅰ | Ⅱ | Ⅲ | Ⅳ | Ⅴ | Ⅵ | Ⅶ | Ⅷ | Ⅸ | Ⅹ |
+| :--------: | :---------: | :---------: | :---------: | :---------: | :---------:| :---------: | :-------: | :-------:| :------:|
+| Android[:squirrel:](#Android) | Java[:coffee:](#Java)|Kotlin[:unlock:](#Kotlin) | 面试[:memo:](#面试指南) |网络[:cloud:](#网络协议)| 操作系统 [:computer:](#操作系统)| 系统设计[:bulb:](#系统设计)| 工具[:wrench:](#工具)| 数据库[:floppy_disk:](#数据库)| 算法[:pencil2:](#数据结构与算法) | -->
+
+| &nbsp;Android&nbsp; | Java | &nbsp;Kotlin&nbsp; | &nbsp;面试&nbsp; | 网络 | &nbsp;&nbsp;操作系统&nbsp;&nbsp; | &nbsp;系统设计&nbsp; | &nbsp;工具&nbsp; | &nbsp;数据库&nbsp; | &nbsp;算法&nbsp; |
+| :--------: | :---------: | :---------: | :---------: | :---------: | :---------:| :---------: | :-------: | :-------:| :------:|
+| [:squirrel:](#Android) | [:coffee:](#Java)|[:unlock:](#Kotlin) | [:memo:](#面试指南) |[:cloud:](#网络)|  [:computer:](#操作系统)| [:bulb:](#系统设计)| [:wrench:](#工具)| [:floppy_disk:](#数据库)| [:pencil2:](#数据结构与算法) |
+
+<br>
 
 ## 目录
 
@@ -36,22 +45,27 @@
 - [网络协议](#网络)
 - [操作系统](#操作系统)
     - [Linux相关](#linux相关)
+    - [计算机操作系统](#计算机操作系统)   
 - [数据结构与算法](#数据结构与算法)
     - [数据结构](#数据结构)
     - [算法](#算法)
 - [数据库](#数据库)
     - [MySQL](#mysql)
     - [Redis](#redis)
+    - [数据库系统原理](docs/notes/数据库系统原理.md)
+    - [SQL](docs/notes/SQL.md)
+    - [Leetcode-Database 题解](docs/notes/Leetcode-Database%20题解.md)
 - [系统设计](#系统设计)
     - [设计模式](#设计模式)
     - [常用框架](#常用框架)
     - [数据通信](#数据通信)
     - [网站架构](#网站架构)
-
+    - [攻击技术](docs/notes/攻击技术.md)
 - [工具](#工具)
     - [Git](#git)
     - [Docker](#Docker)
-
+    - [构建工具](docs/notes/构建工具.md)
+    - [正则表达式](docs/notes/正则表达式.md)
 - [常见问题](docs/android/interview/README.md)
 
 ## Android
@@ -64,8 +78,8 @@
 * [IntentService原理解析文章](https://mp.weixin.qq.com/s?__biz=MzI0MjE3OTYwMg==&mid=401611665&idx=1&sn=9b6b1f2924d4adfe4e89a322ab53df9c&scene=21#wechat_redirect)
 * [ContentProvider实例详解](docs/android/AndroidNote/Android基础/ContentProvider实例详解.md)
 * [BroadcastReceiver详细解析](docs/android/AndroidNote/Android基础/BroadcastReceiver详细解析.md)
-* [Android异步任务机制之AsycTask](docs/android/AndroidNote/Android基础/Handler,Looper,MessageQueue关系.md)
-* [Handler,Looper,MessageQueue关系](docs/android/AndroidNote/Android基础/Activity详细解析.md)
+* [Android异步任务机制之AsycTask](docs/android/AndroidNote/Android基础/Android异步任务机制之AsycTask.md)
+* [Handler,Looper,MessageQueue关系](docs/android/AndroidNote/Android基础/Handler,Looper,MessageQueue关系.md)
 * [Android-SQLite的基本使用](docs/android/AndroidNote/Android基础/Android-SQLite的基本使用.md)
 * [Android系统相机与相册的使用](docs/android/AndroidNote/Android基础/Android中相机与相册的详细使用.md)
 * [图片缓存原理](docs/android/AndroidNote/Android基础/图片缓存原理.md)
@@ -84,8 +98,9 @@
 
 ### 进阶
 
+* [Android内存泄漏性能优化总结](docs/android/AndroidNote/内存性能.md)
+* [进程间通信详解](docs/android/AndroidNote/IPC.md)
 * [Android 触控事件解析 - Mastering The Android Touch System 笔记](https://www.jianshu.com/p/c65da5e81afd)
-* [Android 多进程使用场景](http://blog.csdn.net/qq_27489007/article/details/54377655)
 * [Android官网建议代码规范](https://source.android.com/source/code-style#java-language-rules)
 * [30多年编码经验总结成10条最佳实践](https://mp.weixin.qq.com/s?__biz=MzIyMjQ0MTU0NA==&mid=2247484524&idx=1&sn=5b2759e6d89f01e61d021545ca7556b9&chksm=e82c3d4bdf5bb45dd77227982931ede8229ee6910829253a57bb905e810c89bd3f0a162786e8&mpshare=1&scene=23&srcid=1023FjKcLWtRlcDpwEeeJnCN#rd)
 * [Android中的动画](docs/android/AndroidNote/Android进阶/Android中的动画.md)
@@ -95,13 +110,8 @@
 * [自定义RadioGroup](docs/android/AndroidNote/Android进阶/自定义RadioGroup.md)
 * [Android导入项目一直在Building的解决方案](docs/android/AndroidNote/Android进阶/AndroidStudio导入工程一直在Building的解决方案.md)
 * [基于TOTP的双向认证算法](docs/android/AndroidNote/Android进阶/基于OTP算法的双向认证.md)
-* [Android内存泄漏总结.md](docs/android/AndroidNote/Android进阶/Android内存泄漏总结.md)
-* [Handler引起的内存泄漏的案例与分析](docs/android/AndroidNote/Android进阶/Handler引起的内存泄漏以及分析.md)
-* [Android性能优化.md](docs/android/AndroidNote/Android进阶/Android性能优化.md)
-* [LeakCanary的工作过程以及原理](docs/androidAndroidNote/Android性能优化相关/LeakCanary工作过程以及原理.md)
-* [AIDL的具体实现流程](http://bbs.51cto.com/thread-1086040-1.html)
+* [基于TOTP的双向认证算法](docs/android/AndroidNote/Android进阶/基于OTP算法的双向认证.md)
 * [Android中利用异步来优化处理速度](https://mp.weixin.qq.com/s?__biz=MzI0MjE3OTYwMg==&mid=401555104&idx=1&sn=501e6158e6eb26b4e86467be01fd290e&scene=21#wechat_redirect)
-* [为什么选择Binder实现Android中跨进程通信](https://mp.weixin.qq.com/s?__biz=MzI0MjE3OTYwMg==&mid=2649548116&idx=1&sn=d11a131871623110c74e3676d4fcf785&chksm=f1180e29c66f873f9cac5dc104f97fae319c1831219a9fd9458a4429f16562f6712cc7f65a4c&scene=21#wechat_redirect)
 * [三大图片缓存框架的对比](https://mp.weixin.qq.com/s?__biz=MzI0MjE3OTYwMg==&mid=2649547344&idx=2&sn=e3fa99b52055a37202634fe61a62d439&scene=21#wechat_redirect)
 * [SVG图片在Android中的应用](https://mp.weixin.qq.com/s?__biz=MzI0MjE3OTYwMg==&mid=2649548366&idx=1&sn=6cbdf8652ec139859d9be01444e1ad3b&chksm=f1180d33c66f8425a286de4fd5f03aa89308add3593529a91356439cb8c2f8542305561034c8&scene=21#wechat_redirect)
 * [携程App的网络性能优化实践](https://mp.weixin.qq.com/s?__biz=MzI0MjE3OTYwMg==&mid=2649547359&idx=1&sn=9f069a28f5dbe73fb6c241cfa1049571&scene=21#wechat_redirect)
@@ -260,12 +270,12 @@
 
 
 ##### 框架源码分析
-- [EventBus源码分析](docs/android/AndroidNote/sources/eventbus.md)
-- [Bufferknife源码分析](docs/android/AndroidNote/sources/butterknife.md)
-- [Glide 源码分析](docs/android/AndroidNote/sources/glide.md)
-- [OKHttp 源码分析](docs/android/AndroidNote/sources/okhttp.md)
-- [Retrofit 源码分析](docs/android/AndroidNote/sources/retrofit.md)
-- [ViewModel 源码分析](docs/android/AndroidNote/sources/viewmodel.md)
+- [EventBus源码分析](docs/android/sources/eventbus.md)
+- [Bufferknife源码分析](docs/android/sources/butterknife.md)
+- [Glide 源码分析](docs/android/sources/glide.md)
+- [OKHttp 源码分析](docs/android/sources/okhttp.md)
+- [Retrofit 源码分析](docs/android/sources/retrofit.md)
+- [ViewModel 源码分析](docs/android/sources/viewmodel.md)
 - [自定义View详解][1]
 - [Activity界面绘制过程详解][2]
 - [Activity启动过程][3]
@@ -284,7 +294,6 @@
         - [Retrofit详解(上)][16]
         - [Retrofit详解(下)][17]
 ## Kotlin
-
 - [Kotlin学习][48]
     - [Kotlin学习教程(一)][180]
     - [Kotlin学习教程(二)][181]
@@ -366,6 +375,10 @@
 * [后端程序员必备的 Linux 基础知识](docs/operating-system/后端程序员必备的Linux基础知识.md)  
 * [Shell 编程入门](docs/operating-system/Shell.md)  
 
+### 计算机操作系统
+- [计算机操作系统](docs/notes/计算机操作系统%20-%20目录.md)
+
+
 ## 数据结构与算法
 
 ### 数据结构
@@ -406,6 +419,15 @@
 * [Redlock分布式锁](docs/database/Redis/Redlock分布式锁.md)
 * [如何做可靠的分布式锁，Redlock真的可行么](docs/database/Redis/如何做可靠的分布式锁，Redlock真的可行么.md)
 
+### 数据库系统原理
+- [数据库系统原理](docs/notes/数据库系统原理.md)
+
+### SQL
+- [SQL](docs/notes/SQL.md)
+
+### Leetcode-Database 题解
+- [Leetcode-Database 题解](docs/notes/Leetcode-Database%20题解.md)
+    
 ## 系统设计
 
 ### 设计模式
@@ -438,6 +460,9 @@
 - [8 张图读懂大型网站技术架构](docs/system-design/website-architecture/8%20张图读懂大型网站技术架构.md)
 - [【面试精选】关于大型网站系统架构你不得不懂的10个问题](docs/system-design/website-architecture/【面试精选】关于大型网站系统架构你不得不懂的10个问题.md)
 
+### 攻击技术
+- [攻击技术](docs/notes/攻击技术.md)
+
 ## 面试指南
 
 ### 备战面试
@@ -460,6 +485,9 @@
 
 - [5面阿里,终获offer(2018年秋招)](docs/essential-content-for-interview/BATJrealInterviewExperience/5面阿里,终获offer.md)
 
+### Android面试专场
+- [Android面试专场](docs/android/Android-Interview/README.md)
+
 ## 工具
 
 ### Git
@@ -471,14 +499,39 @@
 * [Docker 入门](docs/tools/Docker.md)
 * [一文搞懂 Docker 镜像的常用操作！](docs/tools/Docker-Image.md)
 
-## 说明
+### 构建工具
+* [构建工具](docs/notes/构建工具.md)
+
+### 正则表达式
+* [正则表达式](docs/notes/正则表达式.md)
+
+## 致谢
 本文并非原创，通过各位博主综合而得，以便供自己方便学习，在此感谢各位前辈，并在下面注明出处
 - [Snailclimb/JavaGuide](https://github.com/Snailclimb/JavaGuide)
 - [UCodeUStory/DataStructure](https://github.com/UCodeUStory/DataStructure)
 - [JackChan1999/Android-Interview](https://github.com/JackChan1999/Android-Interview)
 - [linsir6/AndroidNote](https://github.com/linsir6/AndroidNote)
 - [CharonChui/AndroidNote](https://github.com/CharonChui/AndroidNote)
+- [CS-Notes](https://github.com/CyC2018/CS-Notes)
 
+<a href="https://github.com/Snailclimb/JavaGuide" >
+​    <img src="https://avatars0.githubusercontent.com/u/29880145?s=400&v=4" width="50px">
+</a> 
+<a href="https://github.com/UCodeUStory/DataStructure">
+​    <img src="https://avatars3.githubusercontent.com/u/17451281?s=400&v=4" width="50px">
+</a>
+<a href="https://github.com/JackChan1999/Android-Interview">
+​    <img src="https://avatars0.githubusercontent.com/u/16631168?s=400&v=4" width="50px">
+</a>
+<a href="https://github.com/linsir6/AndroidNote">
+​    <img src="https://avatars2.githubusercontent.com/u/16979367?s=400&v=4" width="50px">
+</a>
+<a href="https://github.com/CharonChui/AndroidNote">
+​    <img src="https://avatars0.githubusercontent.com/u/6140231?s=400&v=4" width="50px">
+</a>
+<a href="https://github.com/CyC2018/CS-Notes">
+​    <img src="https://avatars0.githubusercontent.com/u/36260787?s=400&v=4" width="50px">
+</a>
 
 License
 ===
